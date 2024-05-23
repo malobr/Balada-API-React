@@ -1,0 +1,118 @@
+### Raiz da aplicação
+GET http://localhost:5096/
+
+
+### Comeco CADASTROS
+
+### Cadastro de Clientes
+POST http://localhost:5096/cliente/cadastrar
+Content-Type: application/json
+
+{
+    "tipo" : "----CLIENTE----",
+    "nome" : "Gabriel Arcanjo",
+    "cpf" : "02859219527",
+    "vip" : false
+}
+
+### cadastro de Funcionarios
+POST http://localhost:5096/funcionario/cadastrar
+Content-Type: application/json
+
+{
+    "tipo" : "----FUNCIONARIO----",
+    "nome" : "ssaberto",
+    "cpf" : "99999999810",
+    "funcao" : "Bartender",
+    "eventosId" : ""
+}
+
+### cadastro de Eventos
+POST http://localhost:5096/eventos/cadastrar
+Content-Type: application/json
+
+{
+    "tipo" : "----EVENTO----",
+    "nome" : "Musical Idetested",
+    "organizacao" : "Universidade TuiuUnicesumarti",
+    "local" : "Chacara Santana",
+    "estiloMusical" : "Rock"
+}
+### FIM CADASTROS
+
+
+### Comeco Listagens
+
+
+### Listagem de Clientes
+GET http://localhost:5096/cliente/listar
+
+### Listagem de Funcionarios
+GET http://localhost:5096/funcionario/listar
+
+### Listagem de Eventos
+GET http://localhost:5096/eventos/listar
+
+### Listagem de todos os cadastros
+GET http://localhost:5096/listar-todos
+
+### FIM Listagens
+
+### Comeco exclusoes
+
+### Excluir Cliente
+DELETE http://localhost:5096/cliente/excluir/741fcb99-cc92-4287-a0b2-4aacd038e4c2
+
+### Excluir Funcionario
+DELETE http://localhost:5096/funcionario/excluir/d8234c71-61b5-4ba4-9d6c-81cd2ed71c42
+
+### Excluir Evento
+DELETE http://localhost:5096/eventos/excluir/dcbfdbbd-fcf7-47a6-ab18-d4c3fc4596a0
+
+### FIM exclusoes 
+
+### Comeco Alterar
+
+
+### Alterar Cliente
+PUT http://localhost:5096/cliente/alterar/1a76497f-f06b-4b01-802b-5fdefa0067e5
+Content-Type: application/json  
+
+{
+    "nome" : "Joaquim",
+    "cpf" : "12524578905",  
+    "vip" : true  
+}
+// JSON não pode ter comentários dentro do código se não da erro
+// VIP true or false
+// sempre deixar um espaco entre o content-type e o json....
+
+### Alterar Funcionario
+PUT http://localhost:5096/funcionario/alterar/8549928f-454f-45f7-9e01-96699d55e67a
+Content-Type: application/json  
+
+{
+    "nome" : "Ricardo",
+    "cpf" : "98765432104",  
+    "funcao" : "Barman"  
+}
+
+### Alterar Evento
+PUT http://localhost:5096/eventos/alterar/55951b5e-3bfa-478a-9d92-77aa3ef17c0a
+Content-Type: application/json  
+
+{
+    "nome" : "Milionário e José Rico",
+    "organizacao" : "Oficina de Música",  
+    "Local" : "Pedreira Paulo Leminski",
+    "estiloMusical" : "Modão"
+}
+### Fim Alterar
+
+### Verificando VIP
+
+### Verificar se cliente é VIP
+GET http://localhost:5096/cliente/verificarVip/ced6d94f-d3ef-455d-b23c-3eae88923366
+
+### Buscar cliente
+GET http://localhost:5096/cliente/buscar/12345678901
