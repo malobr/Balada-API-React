@@ -10,9 +10,9 @@ Content-Type: application/json
 
 {
     "tipo" : "----CLIENTE----",
-    "nome" : "Gabriel Arcanjo",
-    "cpf" : "02859219527",
-    "vip" : false
+    "nome" : "Gabriela",
+    "cpf" : "12345678910",
+    "vip" : true
 }
 
 ### cadastro de Funcionarios
