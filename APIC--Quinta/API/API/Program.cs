@@ -243,4 +243,10 @@ app.MapGet("/cliente/buscar/{Cpf}", ([FromRoute] string cpf, [FromServices] AppD
     }
 });
 
+
+
+
+
+
+
 app.Run();

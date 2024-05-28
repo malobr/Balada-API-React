@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ClienteForm from './testes/ClienteForm';
-import FuncionarioForm from './testes/FuncionarioForm';
-import EventoForm from './testes/EventoForm';
+import ClienteForm from './ClienteForm';
 
 interface Cliente {
     tipo: string;
@@ -57,12 +55,7 @@ function Teste() {
             },
             body: JSON.stringify(novoCliente)
         })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro na resposta da requisição');
-            }
-            return response.json();
-        })
+        .then(response => response.json())
         .then(clienteAdicionado => {
             setDados(prevDados => ({
                 ...prevDados,
@@ -70,52 +63,6 @@ function Teste() {
             }));
         })
         .catch(error => console.error('Erro ao adicionar cliente:', error));
-    };
-
-    const handleAddFuncionario = (novoFuncionario: Funcionario) => {
-        fetch("http://localhost:5096/adicionar-funcionario", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(novoFuncionario)
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro na resposta da requisição');
-            }
-            return response.json();
-        })
-        .then(funcionarioAdicionado => {
-            setDados(prevDados => ({
-                ...prevDados,
-                funcionarios: [...prevDados.funcionarios, funcionarioAdicionado]
-            }));
-        })
-        .catch(error => console.error('Erro ao adicionar funcionário:', error));
-    };
-
-    const handleAddEvento = (novoEvento: Evento) => {
-        fetch("http://localhost:5096/adicionar-evento", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(novoEvento)
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro na resposta da requisição');
-            }
-            return response.json();
-        })
-        .then(eventoAdicionado => {
-            setDados(prevDados => ({
-                ...prevDados,
-                eventos: [...prevDados.eventos, eventoAdicionado]
-            }));
-        })
-        .catch(error => console.error('Erro ao adicionar evento:', error));
     };
 
     return (
@@ -148,16 +95,11 @@ function Teste() {
                         <li key={funcionario.id}>
                             ID: {funcionario.id},
                             <br /> Nome: {funcionario.nome},
-                            <br /> CPF: {funcionario.cpf}, 
+                            <br />CPF: {funcionario.cpf}, 
                             <br /> Funcao: ({funcionario.funcao})
                         </li>
                     ))}
                 </ul>
-            </div>
-
-            <div>
-                <h2>Adicionar Novo Funcionário</h2>
-                <FuncionarioForm onAddFuncionario={handleAddFuncionario} />
             </div>
 
             <div>
@@ -172,11 +114,6 @@ function Teste() {
                         </li>
                     ))}
                 </ul>
-            </div>
-
-            <div>
-                <h2>Adicionar Novo Evento</h2>
-                <EventoForm onAddEvento={handleAddEvento} />
             </div>
         </div>
     );
