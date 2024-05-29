@@ -10,8 +10,8 @@ Content-Type: application/json
 
 {
     "tipo" : "----CLIENTE----",
-    "nome" : "Gabriela",
-    "cpf" : "12345678910",
+    "nome" : "Maria",
+    "cpf" : "09876543211",
     "vip" : true
 }
 
@@ -21,8 +21,8 @@ Content-Type: application/json
 
 {
     "tipo" : "----FUNCIONARIO----",
-    "nome" : "ssaberto",
-    "cpf" : "99999999810",
+    "nome" : "putin da silva",
+    "cpf" : "99999999819",
     "funcao" : "Bartender",
     "eventosId" : ""
 }
