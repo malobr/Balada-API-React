@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marce\\OneDrive\\Desktop\\Balada-API-React\\APIC--Quinta\\API\\API\\API.csproj": {}
+    "C:\\Users\\Brian\\Desktop\\Balada-API-React\\APIC--Quinta\\API\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marce\\OneDrive\\Desktop\\Balada-API-React\\APIC--Quinta\\API\\API\\API.csproj": {
+    "C:\\Users\\Brian\\Desktop\\Balada-API-React\\APIC--Quinta\\API\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marce\\OneDrive\\Desktop\\Balada-API-React\\APIC--Quinta\\API\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Brian\\Desktop\\Balada-API-React\\APIC--Quinta\\API\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\marce\\OneDrive\\Desktop\\Balada-API-React\\APIC--Quinta\\API\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\marce\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marce\\OneDrive\\Desktop\\Balada-API-React\\APIC--Quinta\\API\\API\\obj\\",
+        "projectPath": "C:\\Users\\Brian\\Desktop\\Balada-API-React\\APIC--Quinta\\API\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\Brian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Brian\\Desktop\\Balada-API-React\\APIC--Quinta\\API\\API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\marce\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Brian\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -83,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

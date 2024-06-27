@@ -1,17 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './index.css';
-import Teste from './Components/Teste';
-import AddCliente from './Components/testes/AddCliente'
-import ClienteForm from './Components/testes/ClienteForm';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import './App.css';
+import ClienteListar from './Components/pages/cliente-listar';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <Teste/>
-      
-    </div>
+      <BrowserRouter>
+          <div className="App">
+              <nav>
+                  <ul>
+                      <li>
+                        <Link to="./Components/pages/cliente-listar">Lista de clientes</Link>
+                      </li>
+                  </ul>
+              </nav>
+              <Routes>
+                  <Route path="/Components/pages/cliente-listar" element={<ClienteListar />} />
+              </Routes>
+          </div>
+      </BrowserRouter>
   );
-}
+};
 
 export default App;

@@ -6,24 +6,21 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Adiciona o serviço DbContext ao contêiner de serviços
+// Registrar o serviço de banco de dados
 builder.Services.AddDbContext<AppDataContext>();
 
-// Adiciona o serviço de controllers ao contêiner de serviços
-builder.Services.AddControllers();
-
-// Configuração do CORS
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowSpecificOrigin",
-        policy => policy
-            .WithOrigins("http://localhost:3000") // Substitua pelo endereço do seu frontend React
-            .AllowAnyMethod()
-            .AllowAnyHeader());
-});
+// Configurar a politica de CORS para liberar o acesso total
+builder.Services.AddCors(
+    options => options.AddPolicy("Acesso Total", 
+        configs => configs
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod())
+);
+builder.Services.AddDbContext<AppDataContext>();
 
 var app = builder.Build();
+
 
 // Configura o middleware CORS
 app.UseCors("AllowSpecificOrigin");
@@ -243,10 +240,5 @@ app.MapGet("/cliente/buscar/{Cpf}", ([FromRoute] string cpf, [FromServices] AppD
     }
 });
 
-
-
-
-
-
-
+app.UseCors("Acesso Total");
 app.Run();
