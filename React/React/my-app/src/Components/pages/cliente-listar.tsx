@@ -44,4 +44,4 @@ function ClienteListar() {
   );
 }
 
-export default ClienteListar();
+export default ClienteListar; 

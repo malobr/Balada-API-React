@@ -46,4 +46,4 @@ function EventoListar() {
   );
 }
 
-export default EventoListar();
+export default EventoListar;

@@ -46,4 +46,4 @@ function FuncionarioListar() {
   );
 }
 
-export default FuncionarioListar();
+export default FuncionarioListar;

@@ -1,4 +1,4 @@
-export interface Produto{
+export interface Evento{
     tipo?: string;
     id?: string;
     nome: string;
