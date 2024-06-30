@@ -2756,19 +2756,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dados\\.nuget\\packages\\": {}
+    "C:\\Users\\Brian\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dados\\OneDrive\\Documentos\\ADS UP\\2 SEMESTRE\\Tópicos Especiais de Sistema(C#, REACT)\\React\\ATIVIDADES AVALIATIVAS\\Balada_Front\\Balada-API-React\\APIC--Quinta\\API\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\Brian\\Desktop\\Balada-API-React\\APIC--Quinta\\API\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\dados\\OneDrive\\Documentos\\ADS UP\\2 SEMESTRE\\Tópicos Especiais de Sistema(C#, REACT)\\React\\ATIVIDADES AVALIATIVAS\\Balada_Front\\Balada-API-React\\APIC--Quinta\\API\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\dados\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dados\\OneDrive\\Documentos\\ADS UP\\2 SEMESTRE\\Tópicos Especiais de Sistema(C#, REACT)\\React\\ATIVIDADES AVALIATIVAS\\Balada_Front\\Balada-API-React\\APIC--Quinta\\API\\API\\obj\\",
+      "projectPath": "C:\\Users\\Brian\\Desktop\\Balada-API-React\\APIC--Quinta\\API\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\Brian\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Brian\\Desktop\\Balada-API-React\\APIC--Quinta\\API\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dados\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Brian\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -2831,7 +2831,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

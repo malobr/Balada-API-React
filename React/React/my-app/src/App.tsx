@@ -20,69 +20,53 @@ const App: React.FC = () => {
                 {/* Listar  */}
                   <ul>
                       <li>
-                        <Link to="./Components/pages/cliente-listar">Lista de clientes</Link>
+                        <Link to="/cliente-listar">Lista de clientes</Link>
                       </li>
                       <li>
-                        <Link to="./Components/pages/funcionario-listar">Lista dos funcionários</Link>
+                        <Link to="/funcionario-listar">Lista dos funcionários</Link>
                       </li>
                       <li>
-                        <Link to="./Components/pages/evento-listar">Lista dos eventos</Link>
+                        <Link to="/evento-listar">Lista dos eventos</Link>
                       </li>
                   </ul>
                   {/* Cadastrar */}
                   <ul>
                     <li>
-                      <Link to="./Components/pages/cliente-cadastrar">Cadastrar clientes</Link>
+                      <Link to="/cliente-cadastrar">Cadastrar clientes</Link>
                     </li>
                     <li>
-                      <Link to="./Components/pages/funcionario-cadastrar">Cadastrar funcionários</Link>
+                      <Link to="/funcionario-cadastrar">Cadastrar funcionários</Link>
                     </li>
                     <li>
-                      <Link to="./Components/pages/evento-cadastrar">Cadastrar eventos</Link>
+                      <Link to="/evento-cadastrar">Cadastrar eventos</Link>
                     </li>
                   </ul>
                   {/* Excluir */}
                   <ul>
                     <li>
-                      <Link to="./Components/pages/cliente-excluir">Excluir clientes</Link>
+                      <Link to="/cliente-excluir">Excluir clientes</Link>
                     </li>
                     <li>
-                      <Link to="./Components/pages/funcionario-excluir">Excluir funcionarios</Link>
+                      <Link to="/funcionario-excluir">Excluir funcionários</Link>
                     </li>
                     <li>
-                      <Link to="./Components/pages/evento-excluir">Excluir eventos</Link>
+                      <Link to="/evento-excluir">Excluir eventos</Link>
                     </li>
                   </ul>
               </nav>
-              {/* Listar */}
               <Routes>
-                  <Route path="/Components/pages/cliente-listar" element={<ClienteListar />} />
-              </Routes>
-              <Routes>
-                  <Route path="./Components/pages/evento-listar" element={<EventoListar />} />
-              </Routes>
-              <Routes>
-                  <Route path="./Components/pages/funcionario-listar" element={<FuncionarioListar />} />
-              </Routes>
-              {/* Cadastrar */}
-              <Routes>
-                  <Route path="./Components/pages/cliente-cadastrar" element={<ClienteCadastrar />} />
-              </Routes>
-              <Routes>
-                  <Route path="./Components/pages/funcionario-cadastrar" element={<FuncionarioCadastrar />} />
-              </Routes>
-              <Routes>
-                  <Route path="./Components/pages/evento-cadastrar" element={<EventoCadastrar />} />
-              </Routes>
-              {/* Excluir */}
-              <Routes>
-                  <Route path="./Components/pages/cliente-excluir " element={<ClienteExcluir />} />
-              </Routes>
-              <Routes>
-                  <Route path="./Components/pages/funcionario-excluir" element={<FuncionarioExcluir />} />
-              </Routes>
-              <Routes>
-                  <Route path="./Components/pages/evento-excluir" element={<EventoExcluir />} />
+                  {/* Listar */}
+                  <Route path="/cliente-listar" element={<ClienteListar />} />
+                  <Route path="/evento-listar" element={<EventoListar />} />
+                  <Route path="/funcionario-listar" element={<FuncionarioListar />} />
+                  {/* Cadastrar */}
+                  <Route path="/cliente-cadastrar" element={<ClienteCadastrar />} />
+                  <Route path="/funcionario-cadastrar" element={<FuncionarioCadastrar />} />
+                  <Route path="/evento-cadastrar" element={<EventoCadastrar />} />
+                  {/* Excluir */}
+                  <Route path="/cliente-excluir" element={<ClienteExcluir />} />
+                  <Route path="/funcionario-excluir" element={<FuncionarioExcluir />} />
+                  <Route path="/evento-excluir" element={<EventoExcluir />} />
               </Routes>
           </div>
       </BrowserRouter>

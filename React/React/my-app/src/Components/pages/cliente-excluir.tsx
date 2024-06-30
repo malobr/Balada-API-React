@@ -1,4 +1,4 @@
-import React, { useState } from 'react';]
+import React, { useState } from 'react';
 import "./styles.css";
 import { Cliente } from "../../models/Cliente";
 
@@ -36,7 +36,7 @@ const ClienteExcluir: React.FC = () => {
             <h2>Excluir Cliente</h2>
             <form onSubmit={handleSubmit}>
                 <label>
-                    ID do Cliente:
+                    ID do cliente:
                     <input type="text" value={id} onChange={e => setId(e.target.value)} required />
                 </label>
                 <button type="submit">Excluir</button>
