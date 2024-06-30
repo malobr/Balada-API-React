@@ -1,24 +1,29 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
-namespace API.Models;
-
-public class Funcionario
+namespace API.Models
 {
-public Funcionario(){
-    Id = Guid.NewGuid().ToString();
-}
+    public class Funcionario
+    {
+        public Funcionario()
+        {
+            Id = Guid.NewGuid().ToString();
+        }
 
-    public string? Tipo {get; set;}
+        public string? Tipo { get; set; }
 
-    public string? Id { get; set; }
-    [Required(ErrorMessage = "O nome do funcionário é obrigatório!")]
-    public string? Nome {get; set;}
-[Required(ErrorMessage = "CPF é obrigatório!")]
-    public string? Cpf {get; set;}
-    [Required(ErrorMessage = "É preciso informar a função do funcionário!")]
-    public string? Funcao {get; set;}
+        public string? Id { get; set; }
 
-    public Eventos? Eventos {get; set;}//Relacao entre as classes e tabelas...
+        [Required(ErrorMessage = "O nome do funcionário é obrigatório!")]
+        public string? Nome { get; set; }
 
+        [Required(ErrorMessage = "CPF é obrigatório!")]
+        public string? Cpf { get; set; }
 
+        [Required(ErrorMessage = "É preciso informar a função do funcionário!")]
+        public string? Funcao { get; set; }
+
+        [Required(ErrorMessage = "É preciso informar os eventos!")]
+        public List<string>? Eventos { get; set; }  // Ajustar para uma lista de strings
+    }
 }

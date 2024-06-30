@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import "./styles.css";
 import { Funcionario } from "../../models/Funcionario";
 
@@ -7,7 +7,7 @@ const FuncionarioCadastrar: React.FC = () => {
     const [nome, setNome] = useState<string>('');
     const [cpf, setCpf] = useState<string>('');
     const [funcao, setFuncao] = useState<string>('');
-    const [eventos, setEventos] = useState<string>('');
+    const [eventos, setEventos] = useState<string[]>([]);
 
     function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
@@ -38,7 +38,7 @@ const FuncionarioCadastrar: React.FC = () => {
             setNome('');
             setCpf('');
             setFuncao('');
-            setEventos('');
+            setEventos([]);
         })
         .catch(error => {
             console.error('Erro:', error);
@@ -47,7 +47,7 @@ const FuncionarioCadastrar: React.FC = () => {
 
     return (
         <div>
-            <h2>Cadastrar Novo Funcionario</h2>
+            <h2>Cadastrar Novo Funcionário</h2>
             <form onSubmit={handleSubmit}>
                 <label>
                     Tipo:
@@ -66,8 +66,13 @@ const FuncionarioCadastrar: React.FC = () => {
                     <input type="text" value={funcao} onChange={e => setFuncao(e.target.value)} required />
                 </label>
                 <label>
-                    Eventos:
-                    <input type="text" value={eventos} onChange={e => setEventos(e.target.value)} required />
+                    Eventos (separados por vírgula):
+                    <input 
+                        type="text" 
+                        value={eventos.join(',')} 
+                        onChange={e => setEventos(e.target.value.split(',').map(evento => evento.trim()))} 
+                        required 
+                    />
                 </label>
                 <button type="submit">Cadastrar</button>
             </form>
