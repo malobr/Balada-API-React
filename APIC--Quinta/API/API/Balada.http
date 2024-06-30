@@ -58,7 +58,7 @@ GET http://localhost:5096/listar-todos
 
 ### FIM Listagens
 
-### Comeco exclusoes
+### Começo exclusões
 
 ### Excluir Cliente
 DELETE http://localhost:5096/cliente/excluir/741fcb99-cc92-4287-a0b2-4aacd038e4c2
@@ -71,8 +71,7 @@ DELETE http://localhost:5096/eventos/excluir/dcbfdbbd-fcf7-47a6-ab18-d4c3fc4596a
 
 ### FIM exclusoes 
 
-### Comeco Alterar
-
+### Começo Alterar
 
 ### Alterar Cliente
 PUT http://localhost:5096/cliente/alterar/1a76497f-f06b-4b01-802b-5fdefa0067e5
@@ -91,22 +90,11 @@ Content-Type: application/json
 PUT http://localhost:5096/funcionario/alterar/8549928f-454f-45f7-9e01-96699d55e67a
 Content-Type: application/json  
 
-{
-    "nome" : "Ricardo",
-    "cpf" : "98765432104",  
-    "funcao" : "Barman"  
-}
 
 ### Alterar Evento
 PUT http://localhost:5096/eventos/alterar/55951b5e-3bfa-478a-9d92-77aa3ef17c0a
 Content-Type: application/json  
 
-{
-    "nome" : "Milionário e José Rico",
-    "organizacao" : "Oficina de Música",  
-    "Local" : "Pedreira Paulo Leminski",
-    "estiloMusical" : "Modão"
-}
 ### Fim Alterar
 
 ### Verificando VIP

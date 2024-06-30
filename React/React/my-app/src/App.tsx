@@ -10,6 +10,9 @@ import EventoCadastrar from './Components/pages/evento-cadastrar';
 import ClienteExcluir from './Components/pages/cliente-excluir';
 import FuncionarioExcluir from './Components/pages/funcionario-excluir';
 import EventoExcluir from './Components/pages/evento-excluir';
+import ClienteAlterar from './Components/pages/cliente-alterar';
+import FuncionarioAlterar from './Components/pages/funcionario-alterar';
+import EventoAlterar from './Components/pages/evento-alterar';
 
 const App: React.FC = () => {
   return (
@@ -53,6 +56,18 @@ const App: React.FC = () => {
                       <Link to="/evento-excluir">Excluir eventos</Link>
                     </li>
                   </ul>
+                  {/* Alterar */}
+                  <ul>
+                    <li>
+                      <Link to="/cliente-alterar">Alterar clientes</Link>
+                    </li>
+                    <li>
+                      <Link to="/funcionario-alterar">Alterar funcionários</Link>
+                    </li>
+                    <li>
+                      <Link to="/evento-alterar">Alterar eventos</Link>
+                    </li>
+                  </ul>
               </nav>
               <Routes>
                   {/* Listar */}
@@ -67,6 +82,10 @@ const App: React.FC = () => {
                   <Route path="/cliente-excluir" element={<ClienteExcluir />} />
                   <Route path="/funcionario-excluir" element={<FuncionarioExcluir />} />
                   <Route path="/evento-excluir" element={<EventoExcluir />} />
+                  {/* Alterar */}
+                  <Route path="/cliente-alterar" element={<ClienteAlterar />} />
+                  <Route path="/funcionario-alterar" element={<FuncionarioAlterar />} />
+                  <Route path="/evento-alterar" element={<EventoAlterar />} />
               </Routes>
           </div>
       </BrowserRouter>
