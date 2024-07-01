@@ -1,34 +1,123 @@
+/* Estilização geral */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e; /* Background geral mais escuro */
+  margin: 0;
+  padding: 0;
+  color: #f0f0f0; /* Cor do texto ajustada para melhor contraste */
+}
+
 .App {
-    text-align: center;
-    padding: 20px;
-  }
+  text-align: center;
+  padding: 20px;
+}
+
+/* Navbar estilizada */
+nav {
+  background-color: #333; /* Background da navbar ligeiramente mais claro que o fundo geral */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+nav .nav-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+nav h2 {
+  color: #0ff; /* Título da seção em neon cyan */
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0ff; /* Neon cyan */
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #444; /* Cor de fundo mais escura */
+  color: #0ff; /* Neon cyan */
+  box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff; /* Efeito de neon */
+}
+
+/* Estilização da tabela */
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+  background-color: #333; /* Fundo da tabela escuro */
+  color: #f0f0f0; /* Texto da tabela branco */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 15px;
+  border: 1px solid #555; /* Borda mais escura */
+  text-align: left;
+}
+
+th {
+  background-color: #444; /* Fundo do cabeçalho da tabela mais escuro */
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+th:hover {
+  background-color: #0ff; /* Neon cyan ao passar o mouse */
+  color: #1e1e1e; /* Contraste ao passar o mouse */
+}
+
+/* Estilização dos botões */
+button {
+  background-color: #222; /* Fundo escuro */
+  color: #f0f0f0; /* Cor do texto branco */
+  border: 2px solid #0ff; /* Borda neon cyan */
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
   
+  color: #ffffff; /* Texto escuro ao passar o mouse */
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff; /* Efeito de neon */
+}
+
+/* Adicionando responsividade */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav .nav-section {
+    align-items: center;
+  }
+
   nav ul {
-    list-style: none;
-    padding: 0;
+    flex-direction: column;
   }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 10px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: blue;
-  }
-  
-  table {
-    margin: 20px auto;
-    border-collapse: collapse;
-    width: 80%;
-  }
-  
-  th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-  }
-  
-  th {
-    background-color: #f4f4f4;
-  }
+}

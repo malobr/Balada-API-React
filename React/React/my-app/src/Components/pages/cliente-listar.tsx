@@ -21,9 +21,9 @@ const ClienteListar: React.FC = () => {
             <table border={1}>
                 <thead>
                     <tr>
+                        <th>Tipo</th>
                         <th>Id</th>
                         <th>Nome</th>
-                        <th>Tipo</th>
                         <th>CPF</th>
                         <th>VIP</th>
                     </tr>
@@ -31,9 +31,9 @@ const ClienteListar: React.FC = () => {
                 <tbody>
                     {clientes.map(cliente => (
                         <tr key={cliente.id}>
+                        <td>{cliente.tipo}</td>
                             <td>{cliente.id}</td>
                             <td>{cliente.nome}</td>
-                            <td>{cliente.tipo}</td>
                             <td>{cliente.cpf}</td>
                             <td>{cliente.vip}</td>
                         </tr>
